@@ -81,7 +81,7 @@ public class FreeCamera : Script
             Screen.CursorVisible = false;
             Screen.CursorLock = CursorLockMode.Locked;
 
-            var mouseDelta = new Float2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             mouseDelta *= Sensitivity;
             _pitch = Mathf.Clamp(_pitch + mouseDelta.Y, -88, 88);
             _yaw += mouseDelta.X;
